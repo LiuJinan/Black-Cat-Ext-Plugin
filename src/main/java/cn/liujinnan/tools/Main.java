@@ -1,5 +1,7 @@
 package cn.liujinnan.tools;
 
+import cn.liujinnan.tools.plugin.Test;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;

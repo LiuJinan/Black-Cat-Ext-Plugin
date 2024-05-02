@@ -2,7 +2,7 @@
  * copyright(c) 2024 by liujinnan.cn All rights Reserved.
  */
 
-package cn.liujinnan.tools;
+package cn.liujinnan.tools.plugin;
 
 import cn.liujinnan.tools.ext.plugin.Plugin;
 import cn.liujinnan.tools.ext.plugin.annotation.PluginComponent;
@@ -14,7 +14,7 @@ import javax.swing.*;
  * @author: liujinnan
  * @create: 2024-04-27 14:43
  **/
-@PluginComponent(name = "test", icon = "/logo.png")
+//@PluginComponent(name = "test", icon = "/logo.png")
 public class Test implements Plugin {
     @Override
     public JComponent getJComponent() {
