@@ -15,7 +15,7 @@ import java.util.Objects;
  * @author: ljn
  * @create: 2024-05-02 12:32
  **/
-@PluginComponent(name = "IP", icon = "")
+@PluginComponent(name = "IP", icon = "logo.png")
 public class IpPlugin implements Plugin {
 
     @Override
