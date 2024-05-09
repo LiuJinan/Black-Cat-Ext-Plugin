@@ -2,8 +2,6 @@ package cn.liujinnan.tools.ui;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.StringSelection;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Objects;
@@ -15,14 +13,14 @@ import java.util.Objects;
  **/
 public class MsgJButton extends JButton {
 
-    public MsgJButton(String msg) {
+    public MsgJButton(String msg, Component parentComponent) {
         ImageIcon icon = new ImageIcon(Objects.requireNonNull(this.getClass().getResource("/info.png")));
         Image img = icon.getImage();
         Image newImg = img.getScaledInstance(25, 25, java.awt.Image.SCALE_SMOOTH);
 
         this.setIcon(new ImageIcon(newImg));
         this.setSize(30, 20);
-        this.addActionListener(new MsgListener(msg));
+        this.addActionListener(new MsgListener(msg, parentComponent));
     }
 
 
@@ -30,13 +28,16 @@ public class MsgJButton extends JButton {
 
         private String msg;
 
-        public MsgListener(String msg) {
+        private Component parentComponent;
+
+        public MsgListener(String msg, Component parentComponent) {
             this.msg = msg;
+            this.parentComponent = parentComponent;
         }
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            JOptionPane.showMessageDialog(null, msg);
+            JOptionPane.showMessageDialog(parentComponent, msg);
         }
 
     }

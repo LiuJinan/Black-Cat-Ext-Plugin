@@ -39,12 +39,7 @@ public class IpPlugin implements Plugin {
         inputText.setHorizontalAlignment(SwingConstants.CENTER);
         input.add(inputText);
 
-        ImageIcon icon = new ImageIcon(Objects.requireNonNull(this.getClass().getResource("/info.png")));
-        Image img = icon.getImage();
-        Image newImg = img.getScaledInstance(25, 25, java.awt.Image.SCALE_SMOOTH);
-        ImageIcon newIcon = new ImageIcon(newImg);
-
-        input.add(new MsgJButton("格式:172.0.0.1/24"));
+        input.add(new MsgJButton("格式:172.0.0.1/24", panel));
 
         // 网关地址
         MyJPanel networkAddress = new MyJPanel("网关地址:");
