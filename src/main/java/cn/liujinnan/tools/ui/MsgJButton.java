@@ -26,9 +26,9 @@ public class MsgJButton extends JButton {
 
     static class MsgListener implements ActionListener {
 
-        private String msg;
+        private final String msg;
 
-        private Component parentComponent;
+        private final Component parentComponent;
 
         public MsgListener(String msg, Component parentComponent) {
             this.msg = msg;

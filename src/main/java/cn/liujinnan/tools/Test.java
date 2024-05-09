@@ -1,6 +1,7 @@
 package cn.liujinnan.tools;
 
 import cn.liujinnan.tools.ext.plugin.test.TestPlugin;
+import cn.liujinnan.tools.plugin.id.IdPlugin;
 import cn.liujinnan.tools.plugin.ip.IpPlugin;
 
 /**
@@ -11,6 +12,6 @@ import cn.liujinnan.tools.plugin.ip.IpPlugin;
 public class Test {
 
     public static void main(String[] args) {
-        TestPlugin.runTest(new IpPlugin());
+        TestPlugin.runTest(new IdPlugin());
     }
 }

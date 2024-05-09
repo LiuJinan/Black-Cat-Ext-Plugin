@@ -21,7 +21,7 @@ public class CopyJButton extends JButton {
      * @param jTextField 文本框，需要复制内容的文本框
      */
     public CopyJButton(String text, JTextField jTextField) {
-        super(text, null);
+        this.setText(text);
         this.addActionListener(new BtnCopyTextListener(jTextField));
     }
 
