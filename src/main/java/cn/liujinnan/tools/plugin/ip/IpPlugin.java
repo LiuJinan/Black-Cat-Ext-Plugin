@@ -82,6 +82,7 @@ public class IpPlugin implements Plugin {
                 .lastIp(lastIp)
                 .ipCount(ipCount)
                 .outNetIp(outNetIp)
+                .msgParentComponent(panel)
                 .build();
         btn.addActionListener(ipBtnListener);
 

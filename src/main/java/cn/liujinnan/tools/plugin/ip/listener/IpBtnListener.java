@@ -7,6 +7,7 @@ import lombok.Builder;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -17,6 +18,11 @@ import java.awt.event.ActionListener;
  */
 @Builder
 public class IpBtnListener implements ActionListener {
+
+    /**
+     * 提示消息展示于 msgParentComponent 中间位置， msgParentComponent=null，展示在屏幕中间
+     */
+    private Component msgParentComponent;
 
     /**
      * 输入ip短。 172.0.0.1/24
@@ -64,11 +70,11 @@ public class IpBtnListener implements ActionListener {
         String msg = "输入格式错误。格式:172.0.0.1/24";
         boolean contains = input.contains("/");
         if (!contains) {
-            JOptionPane.showMessageDialog(null, msg);
+            JOptionPane.showMessageDialog(msgParentComponent, msg);
             return;
         }
         if (StringUtils.countMatches(input, ".") != 3) {
-            JOptionPane.showMessageDialog(null, msg);
+            JOptionPane.showMessageDialog(msgParentComponent, msg);
             return;
         }
     }
